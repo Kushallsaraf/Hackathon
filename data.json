@@ -1,0 +1,23 @@
+[
+    {
+        "barcode": "0725272730706",
+        "name": "Medicine A",
+        "price": 10.99,
+        "quantity": 30,
+        "link": "https://example.com/medicine-a"
+    },
+    {
+        "barcode": "0123601057072",
+        "name": "Medicine B",
+        "price": 8.99,
+        "quantity": 50,
+        "link": "https://example.com/medicine-b"
+    },
+    {
+        "barcode": "345678901234",
+        "name": "Medicine C",
+        "price": 12.99,
+        "quantity": 20,
+        "link": "https://example.com/medicine-c"
+    }
+]
