@@ -4,11 +4,11 @@ A Flask-based web application that allows users to scan barcodes from images or 
 
 ## Features
 
-- 📸 Upload barcode images to extract medication info
-- 🎥 Scan barcodes using live webcam (base64-encoded input)
-- 🔎 Fetch detailed drug data using a local/internal API
-- 🌐 External links to buy or compare medications online
-- 📱 Responsive, user-friendly UI
+-  Upload barcode images to extract medication info
+-  Scan barcodes using live webcam (base64-encoded input)
+-  Fetch detailed drug data using a local/internal API
+-  External links to buy or compare medications online
+-  Responsive, user-friendly UI
 
 ---
 
