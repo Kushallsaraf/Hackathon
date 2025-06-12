@@ -2,7 +2,7 @@
 
 A Flask-based web application that allows users to scan barcodes from images or webcam input to retrieve detailed medication information. Built during **DeerHacks 2025**, this project aims to promote affordable healthcare by helping users compare medications and discover cheaper alternatives.
 
-## 🔍 Features
+## Features
 
 - 📸 Upload barcode images to extract medication info
 - 🎥 Scan barcodes using live webcam (base64-encoded input)
@@ -12,7 +12,7 @@ A Flask-based web application that allows users to scan barcodes from images or 
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - **[Flask](https://flask.palletsprojects.com/)** – Python web framework
 - **[Pillow](https://python-pillow.org/)** – Image processing library
@@ -22,13 +22,13 @@ A Flask-based web application that allows users to scan barcodes from images or 
 
 ---
 
-## 💡 Inspiration
+## Inspiration
 
 Rising over-the-counter (OTC) medication costs often prevent people from accessing essential healthcare. Inspired by price comparison tools, this project was born out of a need for transparency in drug pricing and accessibility. We aimed to build a solution that helps people find cheaper, quality alternatives easily and effectively.
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. **Upload an Image**: Users can upload a photo containing a medication barcode.
 2. **Barcode Decoding**: The app uses `pyzbar` and `Pillow` to process the image and extract the barcode.
@@ -37,16 +37,16 @@ Rising over-the-counter (OTC) medication costs often prevent people from accessi
 
 ---
 
-## 🎯 What We Learned
+## What We Learned
 
-- 🔍 Implementing real-time barcode scanning
-- 📚 Navigating and integrating medication APIs/databases
-- 🎨 Designing intuitive and accessible UIs
-- 💊 Understanding the connection between drug affordability and public health
+-  Implementing real-time barcode scanning
+-  Navigating and integrating medication APIs/databases
+-  Designing intuitive and accessible UIs
+-  Understanding the connection between drug affordability and public health
 
 ---
 
-## 🧱 Challenges We Faced
+## Challenges We Faced
 
 - **Database Accuracy**: Ensuring reliability of OTC drug data
 - **Barcode Recognition**: Handling inconsistent packaging formats
@@ -56,7 +56,7 @@ Despite these challenges, we delivered a working MVP that can help bridge the ga
 
 ---
 
-## 🧪 Future Improvements
+## Future Improvements
 
 - Integration with a public/global drug database (e.g., FDA NDC Directory)
 - OCR support for text-based drug info in addition to barcodes
@@ -65,9 +65,11 @@ Despite these challenges, we delivered a working MVP that can help bridge the ga
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-
+![Screenshot 2025-06-12 at 4.28.06 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_gUOjVo/Screenshot%202025-06-12%20at%204.28.06%E2%80%AFPM.png)
+![Screenshot 2025-06-12 at 4.28.22 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_tpLIEi/Screenshot%202025-06-12%20at%204.28.22%E2%80%AFPM.png)
+![Screenshot 2025-06-12 at 4.28.32 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_Kk8soK/Screenshot%202025-06-12%20at%204.28.32%E2%80%AFPM.png)
 ---
 
 ## ⚙️ Installation
@@ -76,3 +78,5 @@ Despite these challenges, we delivered a working MVP that can help bridge the ga
    ```bash
    git clone https://github.com/yourusername/barcode-medication-scanner.git
    cd barcode-medication-scanner
+
+---
