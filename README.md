@@ -67,9 +67,8 @@ Despite these challenges, we delivered a working MVP that can help bridge the ga
 
 ## Screenshots
 
-![Screenshot 2025-06-12 at 4.28.06 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_gUOjVo/Screenshot%202025-06-12%20at%204.28.06%E2%80%AFPM.png)
-![Screenshot 2025-06-12 at 4.28.22 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_tpLIEi/Screenshot%202025-06-12%20at%204.28.22%E2%80%AFPM.png)
-![Screenshot 2025-06-12 at 4.28.32 PM.png](../../../../var/folders/8p/h7l661gs0d92mf5c1t0qdmg40000gp/T/TemporaryItems/NSIRD_screencaptureui_Kk8soK/Screenshot%202025-06-12%20at%204.28.32%E2%80%AFPM.png)
+
+
 ---
 
 ## ⚙️ Installation
