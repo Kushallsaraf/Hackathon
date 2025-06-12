@@ -7,49 +7,87 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
-.main-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Header container */
+
+/* Base reset (optional but helpful for consistent styling) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Use a modern font */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Header Container */
+.main-header {
+    background-color: #4CAF50;
+    /* Brand/Accent color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Inner Header Content - Flex layout */
 .header-content {
     max-width: 1200px;
-    padding: 0 10px;
-    text-align: left;
-    /*margin: 0 auto 0 -505px;*/
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    color: #fff;
 }
 
-.main-header h1 {
-    font-size: 2.5rem;
+/* Logo & Title container */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo image */
+.logo {
+    height: 40px;
+    /* Increase or decrease as needed */
+}
+
+/* Main Title */
+.logo-title h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
     margin: 0;
-    font-weight: bold;
 }
 
-.header-tagline {
-    font-size: 1.2rem;
-    margin: 5px 0 0;
-    color: #e0f7ff;
+/* Navigation links container */
+.header-links {
+    display: flex;
+    gap: 1.5rem;
+    /* Spacing between links */
 }
 
-.main-nav {
-    margin-top: 15px;
-}
-
-.main-nav a {
+/* Navigation link styles */
+.header-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
-.main-nav a:hover {
-    color: #ffdd57;
+/* Hover effect for links */
+.header-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
 }
+
+
+
+
 
 /* Main Content Styles */
 main {

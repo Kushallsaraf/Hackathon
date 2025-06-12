@@ -4,8 +4,8 @@ from PIL import Image
 import os
 import base64
 from io import BytesIO
+import requests
 import json
-
 app = Flask(__name__)
 
 # Configure upload folder
@@ -16,28 +16,24 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-# Load medication data from JSON file
-with open('data.json', 'r') as file:
-    medications = json.load(file)
-
-
-# Function to find medication by barcode and sort by price
-def find_and_sort_medications(barcode):
-    # Find all medications with the matching barcode
-    matching_medications = [med for med in medications if med['barcode'] == barcode]
-
-    # Sort medications by price (cheapest to most expensive)
-    sorted_medications = sorted(matching_medications, key=lambda x: x['price'])
-
-    return sorted_medications
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
+
+
+def get_data(barcode):
+    try:
+        response = requests.post("http://localhost:3000/development/drug", json={"barcode": str(barcode)})
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        return {'error': str(e)}
 @app.route('/scanner', methods=['GET', 'POST'])
 def scanner():
     barcode_data = None
+    newData = None
     if request.method == 'POST':
         # Handle file upload
         if 'file' not in request.files:
@@ -57,14 +53,21 @@ def scanner():
 
             # If barcode data is found, fetch and sort medication data
             if barcode_data and not isinstance(barcode_data, str):
-                for barcode in barcode_data:
-                    barcode['medications'] = find_and_sort_medications(barcode['data'])
+                
+                newData = get_data((str(barcode_data[0]['data'])))
+                newData = {
+                    'name': json.loads(newData['message'])['generic']["genericName"],
+                    'data': barcode_data[0]['data'],
+                    "link": "https://shop.rexall.ca/store/rexall/s?k="+json.loads(newData['message'])['generic']["genericName"],
+                }
+                print(newData)
+                
 
-    return render_template('scanner.html', barcode_data=barcode_data)
+               
+                
 
-@app.route('/webcam')
-def webcam():
-    return render_template('webcam.html')
+    return render_template('scanner.html', barcode_data=newData)
+
 
 
 @app.route('/capture', methods=['POST'])
@@ -89,7 +92,7 @@ def capture():
             barcode_info = {
                 'data': barcode.data.decode("utf-8"),
                 'type': barcode.type,
-                'medications': find_and_sort_medications(barcode.data.decode("utf-8"))
+                
             }
             barcode_data.append(barcode_info)
 
@@ -122,5 +125,6 @@ def decode_barcode(image_path):
     return barcode_data
 
 
+
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', debug=True, port="5000")
+    app.run(host='127.0.0.1', debug=True, port=5001)

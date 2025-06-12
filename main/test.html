@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Lambda Function</title>
+</head>
+<body>
+  <h1>Test Lambda Function</h1>
+
+  <label for="barcode">Enter Barcode:</label>
+  <input type="text" id="barcode" placeholder="Enter barcode" />
+  <button onclick="callLambdaFunction()">Submit</button>
+
+  <h2>Response</h2>
+  <pre id="response"></pre>
+
+  <script>
+    async function Post(url, data) {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      return response.json();
+    }
+
+    async function callLambdaFunction() {
+      const barcode = document.getElementById("barcode").value;
+      if (!barcode) {
+        alert("Please enter a barcode.");
+        return;
+      }
+
+      try {
+        const result = await Post("http://localhost:3000/development/drug", {
+          barcode: barcode,
+        });
+
+        const parsed = JSON.parse(result.message);
+        const genericValue = parsed.generic;
+
+        document.getElementById("response").textContent = JSON.stringify(genericValue, null, 2);
+        console.log(genericValue);
+      } catch (err) {
+        document.getElementById("response").textContent = "Error: " + err.message;
+        console.error("Error calling Lambda:", err);
+      }
+    }
+  </script>
+</body>
+</html>
