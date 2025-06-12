@@ -67,7 +67,9 @@ Despite these challenges, we delivered a working MVP that can help bridge the ga
 
 ## Screenshots
 
-
+![Screenshot 2025-06-12 at 4.31.50 PM.png](uploads/Screenshot%202025-06-12%20at%204.31.50%E2%80%AFPM.png)
+![Screenshot 2025-06-12 at 4.32.19 PM.png](uploads/Screenshot%202025-06-12%20at%204.32.19%E2%80%AFPM.png)
+![Screenshot 2025-06-12 at 4.32.31 PM.png](uploads/Screenshot%202025-06-12%20at%204.32.31%E2%80%AFPM.png)
 
 ---
 
