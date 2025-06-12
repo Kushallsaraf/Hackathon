@@ -1,4 +1,4 @@
-# 🧪 Barcode Medication Scanner
+# Barcode Medication Scanner
 
 A Flask-based web application that allows users to scan barcodes from images or webcam input to retrieve detailed medication information. Built during **DeerHacks 2025**, this project aims to promote affordable healthcare by helping users compare medications and discover cheaper alternatives.
 
